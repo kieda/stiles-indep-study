@@ -1,0 +1,50 @@
+idea :
+
+what we need -- the ability to modify different variables
+
+each row represents the modification of a single variable
+we have 2 types of rows -- an enum row, 
+and a value row. When the # of rows grows too large, it begins
+to scroll vertically. 
+
+enum row : Two columns, the JLabel title, then a JDropDownMenu.
+JDropDownMenu -- we select an individual item.
+Also we use it for boolean settings, mapping it ON or OFF
+
+value row: Three columns -- 
+
+first column : JLabel for the name of the variable
+second column : 
+  Top -- a JTextBox which modifies the total +- range 
+         of the slider 
+  Bottom -- JSlider that modifies the value. Has at most 
+         Current value + Top's value, and
+         Current value - Top's value.
+
+third column : JTextBox which displays (and you can modify) the 
+value of the item
+
+-----
+
+variables we want to control --
+
+   enum 	-- smoothing type
+   double 	-- cc value
+   double 	-- exp value
+   boolean 	-- darken or not
+   
+on the display itself -- 
+   zoom using trackpad
+   use trackpad for scrolling 
+
+
+----
+
+Using these, we can explore sequences that are interesting
+
+Map out a series of sequences that provide an interesting pattern -- write out bpm per cc, and what it means fractionally
+Map out dot spacing per cc, what the relationship is. 
+
+
+
+six box storyboard on wednesday
