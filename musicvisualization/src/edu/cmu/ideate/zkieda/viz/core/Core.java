@@ -100,7 +100,7 @@ public class Core implements Runnable{
                 case RUNNING:
                     updateTime();
                 case SUSPENDED:
-                    for(Updateable u : updates) {u.update();}
+                    for(Updateable u : updates) {u.update(dt/1000f);}
                     break sw;
                 case BROKEN:
                     break sw;

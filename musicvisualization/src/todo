@@ -1,0 +1,31 @@
+TODO::
+
+1. (DONE) Set the modulo factor on the Trip such that we have a attenuation
+
+light in 0 -> 255
+
+maps to light * ( 255 - light) / 63.75
+Note that we have the maxima around 127.5, and minimas around light = 0 and 
+light = 255. 
+
+This will enable some neat smoothing
+
+
+apply after we get the byte values (otherwise no interference)
+
+1.5 (DONE) Add in functionality to control the rate, etc of the visualization
+use to find relationship
+
+2. Be able to zoom in -- remove factors based on screen size
+	a. Zoom by manually changing values
+	b. Enable gesture zoom
+
+Keep track of x y pos, and be able to zoom in wrt that. Have floating point
+numbers for where we are.
+
+3. (DONE) Be able to have additional parameters in the function
+Having an interference pattern wrt music would be pretty cool, esp as it moves
+outwards.
+
+4. Add in tonal based on the tempo, tone of the note played. 
+Have a chain of 'if' statements that determines the hue of the note.

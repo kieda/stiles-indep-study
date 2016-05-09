@@ -30,7 +30,6 @@ public class Display extends JFrame implements Updateable{
    private ArrayList<Renderable> paints;//a list of things to paint
    
    private BufferStrategy bf;
-   private BufferedImage bi;
    
    private boolean fullscreen;
    
@@ -55,7 +54,6 @@ public class Display extends JFrame implements Updateable{
    public void createGraphics(){
        setVisible(true);
        setIgnoreRepaint(true);
-       bi = new BufferedImage(500, 500, BufferedImage.TYPE_INT_RGB);
        createBufferStrategy(2);
        bf = this.getBufferStrategy();
        
@@ -67,11 +65,11 @@ public class Display extends JFrame implements Updateable{
        }
    }
    
-   public void update(){
+   public void update(float dt){
 	   do{
            do{
                Graphics2D g2 = (Graphics2D) bf.getDrawGraphics();
-               g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+//               g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
                g2.clearRect(0, 0, getSize().width, getSize().height);
                if (!bf.contentsLost()) {
                    for(Renderable r: paints){//render the paints in order

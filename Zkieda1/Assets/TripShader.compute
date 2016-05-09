@@ -1,0 +1,25 @@
+﻿#pragma kernel CSMain
+
+RWTexture2D<int> Result;
+
+float alpha;   // current alpha
+float lambda;  // current lambda
+float2 pMid;   // the middle point in the texture
+
+[numthreads(32, 16, 1)]
+void CSMain( uint3 dispatchThreadID : SV_DispatchThreadID )
+{
+    float2 pos = (float2)(dispatchThreadID.xy);
+    float dist = dot(pos, pos);
+    float sample = alpha * pow(dist, lambda) % 255;
+    
+
+    // Here we use a quadratic filter
+    // to make things a bit smoother
+    sample = sample * (255 - sample) * 4.0/255.0;
+
+    Result[dispatchThreadID.xy] = ((0xFF000000)|
+                        ((((int)sample)<<16) & 0x00FF0000)|
+                        (((int)sample) & 0x000000FF)|
+                        (((int)sample)<<8) & 0x0000FF00);
+}
