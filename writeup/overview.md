@@ -25,9 +25,9 @@ We have three files that you should look at,
    that we made to make the music sound more interesting
    or similar to music.
 
-   We also discuss the qualitative properties of the sound  
-   we're generating and how that is linked to the  
-   algorithm we are using.  
+   We also discuss the qualitative properties of the sound
+   we're generating and how that is linked to the
+   algorithm we are using.
 
    We discuss the MIDI format, and how we process the MIDI
    data to be reasoned with in a high level manner. 
