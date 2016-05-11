@@ -14,8 +14,8 @@ import edu.cmu.ideate.zkieda.viz.core.Updateable;
 
 public class Trip implements ImageProcessor, Updateable{
     
-    private float alpha = .000001f;//254.5f;
-    private float deltaAlpha = 0f;//1f/255f;//1f;
+    private float alpha = .1f;//254.5f;
+    private float deltaAlpha = .1f;//1f/255f;//1f;
     private float lambda = 1f;
     private float deltaLambda = 0.000f;
     
@@ -56,6 +56,7 @@ public class Trip implements ImageProcessor, Updateable{
         		double y = yPix;
         		
         		double dist = pmid.distanceSq(x, y);
+        		
         		double sample = alphaPrime*Math.pow(dist, lambda) % 255;
 
         		switch(this.gradient) {

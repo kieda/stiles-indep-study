@@ -35,7 +35,7 @@ public class Main {
 	
 	//makes a controller window that we can use 
 	//to change the realtime settings of our visualization program.
-	private final boolean useController = true;
+	private final boolean useController = false;
 	
 	private final File saveDir = new File(System.getProperty("user.home"), "Desktop"); 
 	
