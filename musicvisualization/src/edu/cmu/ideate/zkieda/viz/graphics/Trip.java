@@ -14,9 +14,9 @@ import edu.cmu.ideate.zkieda.viz.core.Updateable;
 
 public class Trip implements ImageProcessor, Updateable{
     
-    private float alpha = .1f;//254.5f;
-    private float deltaAlpha = .1f;//1f/255f;//1f;
-    private float lambda = 1f;
+    private float alpha = 2f;//254.5f;
+    private float deltaAlpha = 0f;//1f/255f;//1f;
+    private float lambda = .35f;
     private float deltaLambda = 0.000f;
     
     private ImagePow ip;

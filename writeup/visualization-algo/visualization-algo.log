@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  11 MAY 2016 00:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  11 MAY 2016 16:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -121,7 +121,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-No file visualization-algo.aux.
+(./visualization-algo.aux)
 \openout1 = `visualization-algo.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -136,6 +136,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
+
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count100
@@ -207,108 +208,199 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 11.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-LaTeX Warning: Reference `fig:vizsmall' on page 1 undefined on input line 16.
-
-
-LaTeX Warning: Reference `fig:vizlarge' on page 1 undefined on input line 16.
-
 <viz-small.png, id=1, 1686.3pt x 1053.9375pt>
 File: viz-small.png Graphic file (type png)
  <use viz-small.png>
-Package pdftex.def Info: viz-small.png used on input line 20.
+Package pdftex.def Info: viz-small.png used on input line 19.
 (pdftex.def)             Requested size: 323.9978pt x 202.48557pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 <viz-large.png, id=3, 1022.82124pt x 694.09312pt>
 File: viz-large.png Graphic file (type png)
  <use viz-large.png>
-Package pdftex.def Info: viz-large.png used on input line 27.
+Package pdftex.def Info: viz-large.png used on input line 26.
 (pdftex.def)             Requested size: 323.9978pt x 219.85846pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `fig:vizsmall' on page 1 undefined on input line 35.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--36
-
- []
-
 [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 43--46
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./viz-s
+mall.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
+
+ []
+
+[2 <./viz-large.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 46--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-<viz-11.png, id=19, 745.28438pt x 504.88625pt>
+<viz-11.png, id=23, 745.28438pt x 504.88625pt>
 File: viz-11.png Graphic file (type png)
  <use viz-11.png>
-Package pdftex.def Info: viz-11.png used on input line 51.
+Package pdftex.def Info: viz-11.png used on input line 54.
 (pdftex.def)             Requested size: 323.9978pt x 219.48506pt.
- [2 <./viz-small.png>] <viz-50.png, id=26, 608.77437pt x 431.6125pt>
+
+<viz-50.png, id=24, 608.77437pt x 431.6125pt>
 File: viz-50.png Graphic file (type png)
  <use viz-50.png>
-Package pdftex.def Info: viz-50.png used on input line 58.
+Package pdftex.def Info: viz-50.png used on input line 61.
 (pdftex.def)             Requested size: 323.9978pt x 229.71506pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<viz-25485.png, id=27, 1686.3pt x 1053.9375pt>
+<viz-25485.png, id=25, 1686.3pt x 1053.9375pt>
 File: viz-25485.png Graphic file (type png)
  <use viz-25485.png>
-Package pdftex.def Info: viz-25485.png used on input line 64.
+Package pdftex.def Info: viz-25485.png used on input line 67.
 (pdftex.def)             Requested size: 323.9978pt x 202.48557pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3 <./viz-large.png> <./viz-11.png>] [4 <./viz-50.png> <./viz-25485.png>]
-[5
+[3 <./viz-11.png>] [4 <./viz-50.png> <./viz-25485.png>]
+<boring.png, id=37, 1686.3pt x 1053.9375pt>
+File: boring.png Graphic file (type png)
+ <use boring.png>
+Package pdftex.def Info: boring.png used on input line 92.
+(pdftex.def)             Requested size: 323.9978pt x 202.48557pt.
+ [5
 
-] (./visualization-algo.aux)
+ <./boring.png>] <linear-small.png, id=45, 1686.3pt x 1053.9375pt>
+File: linear-small.png Graphic file (type png)
+ <use linear-small.png>
+Package pdftex.def Info: linear-small.png used on input line 105.
+(pdftex.def)             Requested size: 323.9978pt x 202.48557pt.
 
-LaTeX Warning: There were undefined references.
+<linear-large.png, id=46, 1686.3pt x 1053.9375pt>
+File: linear-large.png Graphic file (type png)
+ <use linear-large.png>
+Package pdftex.def Info: linear-large.png used on input line 111.
+(pdftex.def)             Requested size: 323.9978pt x 202.48557pt.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- ) 
+<inverted.png, id=47, 1686.3pt x 1053.9375pt>
+File: inverted.png Graphic file (type png)
+ <use inverted.png>
+Package pdftex.def Info: inverted.png used on input line 121.
+(pdftex.def)             Requested size: 251.9989pt x 237.72073pt.
+
+<concave-inverted.png, id=49, 1686.3pt x 1053.9375pt>
+File: concave-inverted.png Graphic file (type png)
+
+<use concave-inverted.png>
+Package pdftex.def Info: concave-inverted.png used on input line 127.
+(pdftex.def)             Requested size: 251.9989pt x 237.72073pt.
+ <concave.png, id=51, 1686.3pt x 1053.9375pt>
+File: concave.png Graphic file (type png)
+
+<use concave.png>
+Package pdftex.def Info: concave.png used on input line 133.
+(pdftex.def)             Requested size: 251.9989pt x 237.72073pt.
+ <convex.png, id=53, 1686.3pt x 1053.9375pt>
+File: convex.png Graphic file (type png)
+ <use convex.png>
+Package pdftex.def Info: convex.png used on input line 139.
+(pdftex.def)             Requested size: 251.9989pt x 237.72073pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 <./linear-small.png>] [7 <./inverted.png> <./linear-large.png>] [8 <./concav
+e-inverted.png> <./concave.png>] [9 <./convex.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+<plot3d1.png, id=78, 385.44pt x 394.47375pt>
+File: plot3d1.png Graphic file (type png)
+ <use plot3d1.png>
+Package pdftex.def Info: plot3d1.png used on input line 151.
+(pdftex.def)             Requested size: 251.9989pt x 257.90367pt.
+
+<plot3d2.png, id=79, 378.41376pt x 373.395pt>
+File: plot3d2.png Graphic file (type png)
+ <use plot3d2.png>
+Package pdftex.def Info: plot3d2.png used on input line 157.
+(pdftex.def)             Requested size: 251.9989pt x 248.6578pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+
+ []
+
+[10
+
+ <./plot3d1.png (PNG copy)>]
+<parabola1.png, id=83, 693.59125pt x 429.605pt>
+File: parabola1.png Graphic file (type png)
+ <use parabola1.png>
+Package pdftex.def Info: parabola1.png used on input line 172.
+(pdftex.def)             Requested size: 360.0pt x 222.98946pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
+
+[11 <./plot3d2.png (PNG copy)>] [12 <./parabola1.png (PNG copy)>] [13]
+(./visualization-algo.aux) ) 
 Here is how much of TeX's memory you used:
- 2207 strings out of 493089
- 30132 string characters out of 6134842
- 93036 words of memory out of 5000000
- 5667 multiletter control sequences out of 15000+600000
- 13653 words of font info for 53 fonts, out of 8000000 for 9000
+ 2274 strings out of 493089
+ 31221 string characters out of 6134842
+ 92167 words of memory out of 5000000
+ 5720 multiletter control sequences out of 15000+600000
+ 14557 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,24p,657b,294s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on visualization-algo.pdf (5 pages, 7798904 bytes).
+ 37i,9n,24p,746b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmss10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmss12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msbm10.pfb>
+Output written on visualization-algo.pdf (13 pages, 24129634 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 139 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
 
