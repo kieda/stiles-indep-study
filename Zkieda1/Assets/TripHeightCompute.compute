@@ -1,0 +1,31 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel HeightMatcher
+struct ResultVals {
+	float val;
+};
+RWStructuredBuffer<ResultVals> Result;
+
+float alpha;   // current alpha
+float lambda;  // current lambda
+float2 pMid;   // the middle point in the texture
+
+			   //[numthreads(32, 16, 1)]
+[numthreads(4, 4, 1)]
+void HeightMatcher(uint3 dispatchThreadID : SV_DispatchThreadID)
+{
+	float2 pos = (float2)(dispatchThreadID.xy);
+	float dist = dot(pos, pos);
+	float s = alpha * pow(dist, lambda) % 255.0;
+
+
+	// Here we use a quadratic filter
+	// to make things a bit smoother
+	s = s * (255.0 - s) * 4.0 / 255.0;
+	//s = clamp(s / 255.0, 0.0, 1.0);
+	
+	Result[dispatchThreadID.y + 32*dispatchThreadID.x].val = s;
+	/*   Result[dispatchThreadID.xy] = ((0xFF000000)|
+	((((int)s)<<16) & 0x00FF0000)|
+	(((int)s) & 0x000000FF)|
+	(((int)s)<<8) & 0x0000FF00);*/
+}
