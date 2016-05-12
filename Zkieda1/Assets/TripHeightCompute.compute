@@ -14,6 +14,7 @@ float2 pMid;   // the middle point in the texture
 void HeightMatcher(uint3 dispatchThreadID : SV_DispatchThreadID)
 {
 	float2 pos = (float2)(dispatchThreadID.xy);
+	pos = pos - pMid;
 	float dist = dot(pos, pos);
 	float s = alpha * pow(dist, lambda) % 255.0;
 
