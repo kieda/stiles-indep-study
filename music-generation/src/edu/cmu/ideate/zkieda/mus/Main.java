@@ -34,6 +34,7 @@ import javax.sound.midi.ShortMessage;
 import javax.sound.midi.Synthesizer;
 import javax.sound.midi.Track;
 import javax.sound.midi.spi.MidiFileReader;
+import javax.swing.JFrame;
 
 import org.jfugue.midi.MidiFileManager;
 import org.jfugue.midi.MidiParser;
@@ -81,7 +82,7 @@ public class Main {
 			trippy = new Trip();
 	    	
 			display.createGraphics();
-			
+			display.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			//add renderables
 			ImageRenderable ir = new ImageRenderable(trippy, display.getWidth(), display.getHeight());
 	    	

@@ -9,12 +9,14 @@ import java.awt.GraphicsEnvironment;
 import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.Toolkit;
+import java.awt.Window;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,9 +34,57 @@ public class Display extends JFrame implements Updateable{
    private BufferStrategy bf;
    
    private boolean fullscreen;
-   
+   private enum OSType{
+	   OSX, WINDOWS, OTHER;
+	   void enableFullScreen(JFrame jf){
+		   switch(this){
+		   case OSX:
+				try {
+					Class.forName("com.apple.eawt.FullScreenUtilities")
+					   		.getMethod("setWindowCanFullScreen", Window.class, Boolean.TYPE).invoke(null, jf, true);
+				} catch (IllegalAccessException  | InvocationTargetException
+						| NoSuchMethodException  | ClassNotFoundException e) {
+					e.printStackTrace();
+				}
+			   break;
+		   default:
+			   jf.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+			   
+			   break;
+		   }
+	   }
+	   void makeFullScreen(JFrame jf){
+		   switch(this){
+		   case OSX:
+			   try{
+				   Class.forName("com.apple.eawt.FullScreenUtilities")
+				   	    .getMethod("setWindowCanFullScreen", Window.class, Boolean.TYPE).invoke(null, jf, true);
+				   Object application = Class.forName("com.apple.eawt.Application")
+				   		.getMethod("getApplication")
+				   		.invoke(null);
+				   application.getClass()
+				   		.getMethod("requestToggleFullScreen", Window.class)
+				   		.invoke(application, jf);
+			   } catch(InvocationTargetException|IllegalAccessException|NoSuchMethodException|ClassNotFoundException e){
+				   e.printStackTrace();
+			   }
+			   break;
+		   default:
+			   jf.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+			   break;
+		   }
+	   }
+   }
+   private OSType detectedOS;
    public Display(boolean fullscreen){
 	   Dimension screenDim = Toolkit.getDefaultToolkit().getScreenSize();
+	   String os = System.getProperty("os.name");
+	   if(os.startsWith("windows")){
+		   detectedOS = OSType.WINDOWS;
+	   } else if(((os.indexOf("mac") >= 0) || (os.indexOf("darwin") >= 0))){
+		   detectedOS = OSType.OSX;
+	   } else detectedOS = OSType.OTHER;
+	   
 	   this.fullscreen = fullscreen;
 	   if(fullscreen){
 		   setUndecorated(true);
@@ -42,7 +92,8 @@ public class Display extends JFrame implements Updateable{
 		   setBounds(0, 0, screenDim.width, screenDim.height);
 		   GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
 		   if(gd.isFullScreenSupported()){
-			   com.apple.eawt.FullScreenUtilities.setWindowCanFullScreen(this, true);
+			   detectedOS.enableFullScreen(this);
+			   
 		   }
 	   } else{
 		   setBounds(screenDim.width/4, screenDim.height/4, (screenDim.width)/2, (screenDim.height)/2);
@@ -60,8 +111,8 @@ public class Display extends JFrame implements Updateable{
        if(this.fullscreen){
     	   //I'm assuming you're gonna be running this on osx
     	   //if not you're fucked (can't compile)
-	       com.apple.eawt.FullScreenUtilities.setWindowCanFullScreen(this, true);
-	       com.apple.eawt.Application.getApplication().requestToggleFullScreen(this);
+    	   detectedOS.makeFullScreen(this);
+	     
        }
    }
    
@@ -86,4 +137,5 @@ public class Display extends JFrame implements Updateable{
    public List<Renderable> getRenderables() {
 		return paints;
    }
+   
 }
